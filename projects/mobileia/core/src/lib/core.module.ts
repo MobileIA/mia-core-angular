@@ -9,6 +9,8 @@ import { MiaRadioElementComponent } from './elements/mia-radio-element/mia-radio
 import { MiaFilezoneElementComponent } from './elements/mia-filezone-element/mia-filezone-element.component';
 import { MiaSelectElementComponent } from './elements/mia-select-element/mia-select-element.component';
 import { MiaCheckboxElementComponent } from './elements/mia-checkbox-element/mia-checkbox-element.component';
+import { MiaDynamicFormService } from './mia-dynamic-form.service';
+import { MiaButtonElementComponent } from './elements/mia-button-element/mia-button-element.component';
 
 @NgModule({
   imports: [
@@ -23,7 +25,8 @@ import { MiaCheckboxElementComponent } from './elements/mia-checkbox-element/mia
     MiaRadioElementComponent, 
     MiaFilezoneElementComponent, 
     MiaSelectElementComponent, 
-    MiaCheckboxElementComponent
+    MiaCheckboxElementComponent, 
+    MiaButtonElementComponent
   ],
   exports: [MiaDynamicFormComponent]
 })

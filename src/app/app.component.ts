@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MiaDynamicFormService } from 'projects/mobileia/core/src/public_api';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  form : FormGroup;
+
+  constructor(private dynamicFormService : MiaDynamicFormService){
+    this.form = dynamicFormService.generateFormGroup(this.fields);
+    //this.form.patchValue({email: "matias@gmail.com"})
+  }
 
   onUpload(e) {
     console.log(e);
@@ -22,7 +30,7 @@ export class AppComponent {
       name: 'firstName',
       label: 'First Name',
       value: '',
-      required: false,
+      required: true,
     },
     {
       type: 'text',
@@ -76,6 +84,11 @@ export class AppComponent {
         { key: 'f', label: 'Fishing' },
         { key: 'c', label: 'Cooking' }
       ]
+    },
+    {
+      type: 'button',
+      name: 'save',
+      label: 'Guardar'
     }
   ];
 }
