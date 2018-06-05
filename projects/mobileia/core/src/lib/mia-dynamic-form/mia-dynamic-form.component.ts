@@ -31,6 +31,10 @@ export class MiaDynamicFormComponent implements OnInit {
     this.form = new FormGroup(fieldsCtrls);
   }
 
+  public setValues(params){
+    this.form.setValue(params);
+  }
+
   /*toFormGroup(fields: any[] ) {
     let group: any = {};
 
