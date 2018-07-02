@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MiaDynamicFormService } from 'projects/mobileia/core/src/public_api';
+import { MiaDynamicFormService, MiaFileService } from 'projects/mobileia/core/src/public_api';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -11,13 +11,20 @@ export class AppComponent {
   title = 'app';
   form : FormGroup;
 
-  constructor(private dynamicFormService : MiaDynamicFormService){
+  constructor(private dynamicFormService : MiaDynamicFormService, private fileService : MiaFileService){
     this.form = dynamicFormService.generateFormGroup(this.fields);
     //this.form.patchValue({email: "matias@gmail.com"})
   }
 
-  onUpload(e) {
-    console.log(e);
+  onUpload(files, field) {
+    // Subir archivo
+    this.fileService.upload("11", files).subscribe(data => {
+      if(data.success){
+        field.value = data.response[0];
+        console.log(data.response[0]);  
+      }
+      console.log(data);
+    });;
   }
 
   onSend(values){

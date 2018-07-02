@@ -11,10 +11,12 @@ import { MiaSelectElementComponent } from './elements/mia-select-element/mia-sel
 import { MiaCheckboxElementComponent } from './elements/mia-checkbox-element/mia-checkbox-element.component';
 import { MiaDynamicFormService } from './mia-dynamic-form.service';
 import { MiaButtonElementComponent } from './elements/mia-button-element/mia-button-element.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
     CommonModule,
+    BrowserModule,
     ReactiveFormsModule
   ],
   declarations: [

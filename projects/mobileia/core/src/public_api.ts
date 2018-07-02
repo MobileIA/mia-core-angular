@@ -9,3 +9,4 @@ export * from './lib/api-response';
 export * from './lib/core.module';
 export * from './lib/mia-dynamic-form/mia-dynamic-form.component';
 export * from './lib/mia-dynamic-form.service';
+export * from './lib/mia-file.service';

@@ -3,7 +3,7 @@
         <p class="m-0">
             Drag a file here or
             <label class="upload-button">
-        <input type="file" multiple="" (change)="field.onUpload($event.target.files)" [formControlName]="field.name" /> browse
+        <input type="file" multiple="" (change)="field.onUpload($event.target.files, field)" [formControlName]="field.name" /> browse
       </label> to upload.
         </p>
     </div>
