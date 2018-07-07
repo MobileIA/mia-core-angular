@@ -20,7 +20,7 @@ export class AppComponent {
     // Subir archivo
     this.fileService.upload("11", files).subscribe(data => {
       if(data.success){
-        field.value = data.response[0];
+        field.value = "https://files.mobileia.com/" + data.response[0].path;
         console.log(data.response[0]);  
       }
       console.log(data);
