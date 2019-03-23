@@ -18,7 +18,18 @@ export class MiaFileService {
     return this.http.post<any>('https://files.mobileia.com/api/upload', formData);
   }
 
-  public uploadWithProgress(app_id : string, files: FileList): Observable<any> {
+  public uploadWithProgressByOne(app_id: string, file: File): Observable<any> {
+    const formData: FormData = new FormData();
+    formData.append('app_id', app_id);
+    formData.append('file[0]', file);
+
+    const req = new HttpRequest('POST', 'https://files.mobileia.com/api/upload', formData, {
+      reportProgress: true,
+    });
+    return this.http.request(req);
+  }
+
+  public uploadWithProgress(app_id: string, files: FileList): Observable<any> {
     var formData: FormData = new FormData();
     formData.append('app_id', app_id);
     for(var i = 0; i < files.length; i++){
