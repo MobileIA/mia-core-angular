@@ -45,7 +45,8 @@ export class MIATableModel {
             where: this.getWhere(),
             search: this.search,
             ord: this.ordType.title,
-            asc: this.ordType.asc
+            asc: this.ordType.asc,
+            limit: this.itemPerPage
         };
     }
 }
