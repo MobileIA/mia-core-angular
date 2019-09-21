@@ -15,8 +15,8 @@ export class MIATableModel {
     }
 
     getWhere(): string {
-        var result = '';
-        var isFirst = true;
+        let result = '';
+        let isFirst = true;
         // tslint:disable-next-line:forin
         for (const key in this.wheres) {
             const value = this.wheres[key];
