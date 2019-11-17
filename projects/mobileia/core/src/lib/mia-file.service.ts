@@ -7,6 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class MiaFileService {
 
+  baseUrl = 'http://0.0.0.0:8080/files/upload';
+  //baseUrl = 'https://files.mobileia.com/api/upload';
+
   constructor(private http: HttpClient) { }
 
   public upload(app_id : string, files: FileList): Observable<any> {
@@ -15,7 +18,7 @@ export class MiaFileService {
     for(var i = 0; i < files.length; i++){
       formData.append('file['+i+']', files[i]);
     }
-    return this.http.post<any>('https://files.mobileia.com/api/upload', formData);
+    return this.http.post<any>('http://0.0.0.0:8080/files/upload', formData);
   }
 
   public uploadWithProgressByOne(app_id: string, file: File): Observable<any> {

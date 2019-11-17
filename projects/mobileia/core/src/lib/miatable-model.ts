@@ -14,6 +14,10 @@ export class MIATableModel {
         this.wheres[key] = value;
     }
 
+    addwhereIn(key, values) {
+        this.wheres[key + ':in'] = values;
+    }
+
     getWhere(): string {
         let result = '';
         let isFirst = true;
