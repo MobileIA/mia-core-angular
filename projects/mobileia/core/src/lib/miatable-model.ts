@@ -18,6 +18,13 @@ export class MIATableModel {
         this.wheres[key + ':in'] = values;
     }
 
+    removeWhere(key) {
+        let index = this.wheres.indexOf(key);
+        if (index != -1) {
+            this.wheres.splice(index, 1);
+        }
+    }
+
     getWhere(): string {
         let result = '';
         let isFirst = true;
