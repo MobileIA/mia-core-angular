@@ -18,6 +18,10 @@ export class MIATableModel {
         this.wheres[key + ':in'] = values;
     }
 
+    addwhereLike(key, values) {
+        this.wheres[key + ':like'] = values;
+    }
+
     removeWhere(key) {
         let index = this.wheres.indexOf(key);
         if (index != -1) {
