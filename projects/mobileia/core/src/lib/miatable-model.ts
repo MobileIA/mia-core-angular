@@ -18,6 +18,10 @@ export class MIATableModel {
         this.wheres[key + ':in'] = values;
     }
 
+    addwhereNotIn(key, values) {
+        this.wheres[key + ':notin'] = values;
+    }
+
     addwhereLike(key, values) {
         this.wheres[key + ':like'] = values;
     }
