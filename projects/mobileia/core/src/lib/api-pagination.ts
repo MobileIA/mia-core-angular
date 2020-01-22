@@ -10,5 +10,5 @@ export class ApiPagination <T> {
     public prev_page_url: string;
     public to: string;
     public total: number;
-    public data: [T];
+    public data: Array<T>;
 }
