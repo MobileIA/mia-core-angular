@@ -1,7 +1,7 @@
 export class MIATableModel {
     pageCurrent = 1;
     lastPage = 1;
-    itemPerPage = 10;
+    itemPerPage = 25;
 
     wheres = [];
     filters: {[k: string]: any} = {};
