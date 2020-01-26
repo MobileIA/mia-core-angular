@@ -26,6 +26,10 @@ export class MIATableModel {
         this.wheres[key + ':like'] = values;
     }
 
+    addwhereBetween(key, from, to) {
+        this.wheres[key + ':between'] = from + ':' + to;
+    }
+
     removeWhere(key) {
         let index = this.wheres.indexOf(key);
         if (index != -1) {
