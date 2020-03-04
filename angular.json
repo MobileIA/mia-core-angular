@@ -143,9 +143,9 @@
           },
           "configurations": {
             "production": {
-              "project": "projects/mobileia/core/ng-package.prod.json"
-            ,              "tsConfig": "projects/mobileia/core/tsconfig.lib.prod.json"
-}
+              "project": "projects/mobileia/core/ng-package.prod.json",
+              "tsConfig": "projects/mobileia/core/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -171,5 +171,8 @@
       }
     }
   },
-  "defaultProject": "mia-core-angular"
+  "defaultProject": "mia-core-angular",
+  "cli": {
+    "analytics": "fa395564-f8a9-47a5-8d90-a4dc00c6cac8"
+  }
 }
