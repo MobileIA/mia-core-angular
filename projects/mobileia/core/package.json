@@ -1,6 +1,6 @@
 {
     "name": "@mobileia/core",
-    "version": "8.0.10",
+    "version": "9.0.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/MobileIA/mia-core-angular.git"
@@ -9,8 +9,8 @@
     "author": "Matias Camiletti",
     "license": "ISC",
     "peerDependencies": {
-        "@angular/common": "^8.2.7",
-        "@angular/core": "^8.2.7",
-        "@angular/forms": "^8.2.7"
+        "@angular/common": "^9.0.5",
+        "@angular/core": "^9.0.5",
+        "@angular/forms": "^9.0.5"
     }
 }
