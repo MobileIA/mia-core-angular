@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Directive } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
+@Directive()
 export class MiaBaseElementComponent implements OnInit {
     @Input() field:any = {};
     @Input() form:FormGroup;
