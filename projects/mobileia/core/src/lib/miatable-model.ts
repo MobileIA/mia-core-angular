@@ -6,6 +6,8 @@ export class MIATableModel {
     wheres = [];
     filters: {[k: string]: any} = {};
 
+    withs = [];
+
     search = '';
 
     ordType = { title: '', asc: 1 };
@@ -56,6 +58,21 @@ export class MIATableModel {
         this.wheres = [];
     }
 
+    addWith(name: string) {
+        this.withs.push(name);
+    }
+
+    removeWith(name: string) {
+        let index = this.withs.indexOf(name);
+        if (index != -1) {
+            this.withs.splice(index, 1);
+        }
+    }
+
+    resetWith() {
+        this.withs = [];
+    }
+
     setPagination(lastPage, itemPerPage) {
         // Guardamos ultima pagina
         this.lastPage = lastPage;
@@ -66,6 +83,7 @@ export class MIATableModel {
         return {
             page: this.pageCurrent,
             where: this.getWhere(),
+            withs: this.withs,
             search: this.search,
             ord: this.ordType.title,
             asc: this.ordType.asc,
