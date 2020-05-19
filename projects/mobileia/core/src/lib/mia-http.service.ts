@@ -11,8 +11,36 @@ export class MiaHttpService {
         this._httpReference = http;
     }
 
+    public postArrayPro(url: string, params: any): Promise<[any]> {
+        return new Promise<any>((resolve, reject) => {
+            this.postArray(url, params).toPromise().then(result => {
+              if (result.success) {
+                resolve(result.response);
+              } else {
+                reject(result.error);
+              }
+            }).catch(error => {
+              reject(error);
+            });
+        });
+    }
+
     public postArray(url: string, params: any): Observable<ApiResponse<[any]>> {
         return this._httpReference.post<ApiResponse<[any]>>(url, params);
+    }
+
+    public postObjectPro(url: string, params: any): Promise<any> {
+        return new Promise<any>((resolve, reject) => {
+            this.postObject(url, params).toPromise().then(result => {
+              if (result.success) {
+                resolve(result.response);
+              } else {
+                reject(result.error);
+              }
+            }).catch(error => {
+              reject(error);
+            });
+        });
     }
 
     public postObject(url: string, params: any): Observable<ApiResponse<any>> {
