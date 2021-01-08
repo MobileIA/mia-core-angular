@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MiaDynamicFormComponent } from './mia-dynamic-form.component';
 
@@ -6,7 +6,7 @@ describe('MiaDynamicFormComponent', () => {
   let component: MiaDynamicFormComponent;
   let fixture: ComponentFixture<MiaDynamicFormComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MiaDynamicFormComponent ]
     })

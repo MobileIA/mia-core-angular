@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MiaCheckboxElementComponent } from './mia-checkbox-element.component';
 
@@ -6,7 +6,7 @@ describe('MiaCheckboxElementComponent', () => {
   let component: MiaCheckboxElementComponent;
   let fixture: ComponentFixture<MiaCheckboxElementComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MiaCheckboxElementComponent ]
     })

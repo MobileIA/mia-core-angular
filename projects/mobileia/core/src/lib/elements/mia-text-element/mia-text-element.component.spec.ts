@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MiaTextElementComponent } from './mia-text-element.component';
 
@@ -6,7 +6,7 @@ describe('MiaTextElementComponent', () => {
   let component: MiaTextElementComponent;
   let fixture: ComponentFixture<MiaTextElementComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MiaTextElementComponent ]
     })
