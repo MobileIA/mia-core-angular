@@ -8,6 +8,9 @@
     "keywords": [],
     "author": "Matias Camiletti",
     "license": "ISC",
+    "dependencies": {
+      "tslib": "^2.0.0"
+    },
     "peerDependencies": {
         "@angular/common": "^9.0.5",
         "@angular/animations": "^9.0.5",
